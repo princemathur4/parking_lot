@@ -3,9 +3,8 @@ from parking_lot.entities import Queue
 from parking_lot.entities.parking_area import ParkingArea
 from parking_lot.entities.payments import PaymentGateway
 from parking_lot.entities.vehicle import Vehicle
-from parking_lot.exceptions import ParkingSpotNotAvailable, InvalidPaymentMethod, ParkingSpotAlreadyOccupied, \
-    InvalidParkingSpotId
-from parking_lot.parking_ticket import ParkingTicket
+from parking_lot.exceptions import ParkingSpotNotAvailable
+from parking_lot.entities.parking_ticket import ParkingTicket
 
 
 class ParkingManager:
