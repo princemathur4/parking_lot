@@ -1,4 +1,4 @@
-#Design a parking lot
+# Design a parking lot
 ## Setup
 - Install python3 if not installed already
 - Clone the repository using: `git clone https://github.com/princemathur4/parking_lot`
@@ -19,7 +19,7 @@ For Linux:
 - Run using command: `python simulate.py`
 
 
-#Proposed Design:
+# Proposed Design:
 Entities:
 - Vehicle
     Types:
