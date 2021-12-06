@@ -18,6 +18,7 @@ class ParkingSpot(metaclass=ABCMeta):
     @property
     @abstractmethod
     def cost_per_second(self) -> int:
+        # cost per second instead of per hour for the sake of easy testability
         pass
 
     @property
@@ -31,12 +32,19 @@ class ParkingSpot(metaclass=ABCMeta):
         pass
     
     def park(self, vehicle: Vehicle):
+        """
+        Park the vehicle on the current instance parking spot
+        :param vehicle:
+        """
         if self.occupied:
             raise ParkingSpotAlreadyOccupied
         self.parked_vehicle = vehicle
         self.occupied = True
 
     def unpark(self):
+        """
+        Unpark the vehicle from the current instance parking spot
+        """
         if not self.occupied:
             raise NoVehicleParked
         self.parked_vehicle = None
